@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Viewport Meta Tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+    <title>Interactive Rating Platform Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Include html2canvas -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <!-- Signup/Login Div -->
+    <div id="auth" class="mb-3">
+        <button id="loginButton" class="btn btn-primary">Login</button>
+    </div>
+
+    <!-- Instructions Panel -->
+    <div id="instructions">
+        <h2>How to Use</h2>
+        <p>Drag the pin on the graph to rate the content based on its objectivity and political leaning.</p>
+        <!-- Add more detailed instructions -->
+    </div>
+
+    <!-- Content Input -->
+    <div id="content-input">
+        <input type="text" id="contentUrl" placeholder="Enter content URL">
+        <button id="previewButton">Preview Content</button>
+    </div>
+
+    <!-- Content Preview -->
+    <div id="content-preview">
+        <!-- Content preview will be displayed here -->
+    </div>
+    <div id="definitions" class="mb-3">
+        <h3>Definitions</h3>
+        <ul>
+            <li><strong>Objective:</strong> Based on facts, unbiased.</li>
+            <li><strong>Subjective:</strong> Based on personal opinions, interpretations.</li>
+            <li><strong>Liberal:</strong> Favoring progressive policies and reforms.</li>
+            <li><strong>Conservative:</strong> Favoring traditional values and established practices.</li>
+        </ul>
+    </div>
+    <!-- Interactive Graph -->
+    <div id="graph"></div>
+
+    <!-- Submit and Share -->
+    <div id="actions">
+        <button id="submitRating">Submit Rating</button>
+        <button id="downloadImage">Download Rating as Image</button>
+    </div>
+    <div id="social-share">
+        <button onclick="shareOnTwitter()">Share on Twitter</button>
+    </div>
+    
+    <!-- Include the main script -->
+    <script src="script.js"></script>
+</body>
+</html>
